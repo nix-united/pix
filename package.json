@@ -1,0 +1,57 @@
+{
+    "name": "pix",
+    "description": "This app designed to view photos and videos from Google Drive",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:nix-group/pix.git"
+    },
+    "author": "Mykyta Pidhornyi <mykyta.pidhornyi@nixs.com>",
+    "keywords": [
+        "pix",
+        "gallery"
+    ],
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nix-group/pix/issues"
+    },
+    "homepage": "https://github.com/nix-group/pix#readme",
+    "dependencies": {
+        "@react-oauth/google": "^0.11.0",
+        "axios": "^1.4.0",
+        "clsx": "^2.0.0",
+        "photoswipe": "^5.3.8",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-loading-skeleton": "^3.3.1",
+        "react-photo-album": "^2.2.2",
+        "react-photoswipe-gallery": "^2.2.7",
+        "react-router-dom": "^6.14.2",
+        "react-tooltip": "^5.18.1",
+        "swr": "^2.2.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.4.2",
+        "@types/react": "^18.2.14",
+        "@types/react-dom": "^18.2.6",
+        "@types/react-router-dom": "^5.3.3",
+        "@typescript-eslint/eslint-plugin": "^5.61.0",
+        "@typescript-eslint/parser": "^5.61.0",
+        "@vitejs/plugin-react": "^4.0.1",
+        "eslint": "^8.44.0",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-react-refresh": "^0.4.1",
+        "sass": "^1.63.6",
+        "typescript": "^5.0.2",
+        "vite": "^4.4.0",
+        "vite-plugin-svgr": "^3.2.0"
+    }
+}
