@@ -1,11 +1,10 @@
 {
     "compilerOptions": {
-        "target": "ESNext",
+        "target": "ES2020",
         "useDefineForClassFields": true,
-        "lib": ["ESNext", "DOM", "DOM.Iterable"],
+        "lib": ["ES2020", "DOM", "DOM.Iterable"],
         "module": "ESNext",
         "skipLibCheck": true,
-        "allowJs": true,
 
         /* Bundler mode */
         "moduleResolution": "bundler",
@@ -22,12 +21,13 @@
         "noFallthroughCasesInSwitch": true,
         "paths": {
             "@/*": ["./src/*"],
-            "components/*": ["./src/components/*"],
-            "pages/*": ["./src/pages/*"],
-            "assets/*": ["./src/assets/*"],
-            "hooks/*": ["./src/hooks/*"],
-            "utils/*": ["./src/utils/*"],
-            "types/*": ["./src/@types/*"]
+            "@components/*": ["./src/components/*"],
+            "@pages/*": ["./src/pages/*"],
+            "@assets/*": ["./src/assets/*"],
+            "@hooks/*": ["./src/hooks/*"],
+            "@utils/*": ["./src/utils/*"],
+            "@types/*": ["./src/@types/*"],
+            "@constants/*": ["./src/@constants/*"]
         }
     },
     "include": ["src"],
