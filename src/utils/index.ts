@@ -1,0 +1,1 @@
+export { storageToken } from './storageToken'
