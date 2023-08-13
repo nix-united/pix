@@ -1,0 +1,25 @@
+@import 'variables';
+
+@mixin gt-xs {
+    @media screen and (min-width: #{$screen-sm-min}) {
+        @content;
+    }
+}
+
+@mixin gt-sm {
+    @media screen and (min-width: #{$screen-md-min}) {
+        @content;
+    }
+}
+
+@mixin gt-md {
+    @media screen and (min-width: #{$screen-lg-min}) {
+        @content;
+    }
+}
+
+@mixin gt-lg {
+    @media screen and (min-width: #{$screen-xl-min}) {
+        @content;
+    }
+}

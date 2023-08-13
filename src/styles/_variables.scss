@@ -1,0 +1,17 @@
+// media aliases and breakpoints
+$screen-sm-min: 600px;
+$screen-md-min: 960px;
+$screen-lg-min: 1280px;
+$screen-xl-min: 1920px;
+
+// colors
+$primary-blue: #00aeef;
+$primary-yellow: #ffd700;
+$charcoal-gray: #343434;
+$smoke-gray: #8d8d8d;
+$cloud-gray: #e6e6e6;
+$gray: #cccccc;
+
+//transitions
+$tr-bg-color: background-color 0.3s ease-in-out;
+$tr-b-color: border-color 0.3s ease-in-out;

@@ -1,0 +1,5 @@
+export { ReactComponent as CloseIcon } from './close.svg'
+export { ReactComponent as GoogleIcon } from './google-logo.svg'
+export { ReactComponent as NixSignIcon } from './nix-x-sign.svg'
+export { ReactComponent as WarningIcon } from './warning.svg'
+export { ReactComponent as ChevronLeftIcon } from './chevron-left.svg'

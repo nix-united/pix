@@ -1,0 +1,64 @@
+@use '/src/styles/media-queries' as *;
+@import 'src/styles/variables';
+
+.not-found-container {
+    .title {
+        font-size: 6em;
+        font-weight: 700;
+        text-align: center;
+        color: $primary-blue;
+        user-select: none;
+        line-height: 80px;
+
+        @include gt-sm {
+            font-size: 7em;
+            line-height: 90px;
+        }
+    }
+
+    .helper-text {
+        font-weight: 300;
+        font-size: 1em;
+        text-align: center;
+        color: $smoke-gray;
+        user-select: none;
+
+        @include gt-sm {
+            font-size: 1.1em;
+        }
+    }
+
+    .back-button {
+        border: 1px solid $cloud-gray;
+        border-radius: 3em;
+        padding: 1em 4.7em;
+        margin: 8px auto 10px;
+
+        @include gt-sm {
+            padding: 1.1em 5.6em;
+            margin: 10px auto;
+        }
+
+        svg {
+            position: relative;
+            right: 3.4em;
+            height: 12px;
+            overflow: visible;
+
+            @include gt-sm {
+                right: 4.2em;
+                height: initial;
+            }
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 1.15em;
+            color: $charcoal-gray;
+
+            @include gt-sm {
+                font-size: 1.45em;
+            }
+        }
+    }
+}

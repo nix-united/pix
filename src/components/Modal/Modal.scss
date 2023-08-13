@@ -1,0 +1,70 @@
+@use '/src/styles/media-queries' as *;
+@use '/src/styles/variables';
+
+.modal-container {
+    z-index: 9999999;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($color: #000000, $alpha: 0.35);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .modal {
+        width: 90vw;
+        height: auto;
+        background-color: #fafafa;
+        padding: 2rem;
+        border-radius: 20px;
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+        text-align: center;
+
+        @include gt-xs {
+            width: 60vw;
+        }
+
+        @include gt-sm {
+            width: 30vw;
+        }
+
+        &-header {
+            position: relative;
+
+            svg {
+                path {
+                    transition: stroke 0.3s ease-in-out;
+                }
+            }
+
+            .modal-title {
+                font-size: 1.3em;
+                font-weight: bold;
+            }
+
+            .close {
+                position: absolute;
+                top: -13px;
+                right: -10px;
+                background: transparent;
+                margin-left: auto;
+                border: none;
+
+                &:hover {
+                    svg {
+                        path {
+                            stroke: $charcoal-gray;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-content {
+            padding: 1.3rem 0;
+        }
+    }
+}

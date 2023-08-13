@@ -1,0 +1,142 @@
+@use '/src/styles/media-queries' as *;
+@use 'src/styles/variables';
+
+.home-page-container {
+    .title {
+        text-align: center;
+        color: $primary-blue;
+        font-weight: 700;
+        font-size: 3.8em;
+        line-height: 60px;
+        user-select: none;
+
+        @include gt-xs {
+            font-size: 4.4em;
+        }
+
+        @include gt-sm {
+            font-size: 4.75em;
+        }
+
+        .wrapper {
+            white-space: nowrap;
+        }
+
+        .middle-text {
+            font-size: 0.55em;
+            font-weight: 400;
+            color: $charcoal-gray;
+        }
+
+        .logo {
+            span {
+                margin-right: -2px;
+
+                @include gt-xs {
+                    margin-right: 0.5px;
+                }
+
+                @include gt-sm {
+                    margin-right: 2px;
+                }
+            }
+
+            svg {
+                position: relative;
+                bottom: -1.7px;
+                height: 34px;
+
+                @include gt-xs {
+                    height: 40px;
+                    bottom: -2px;
+                }
+
+                @include gt-sm {
+                    height: initial;
+                }
+            }
+        }
+    }
+
+    .helper-text {
+        font-weight: 300;
+        font-size: 1em;
+        text-align: center;
+        color: $smoke-gray;
+        user-select: none;
+
+        span {
+            white-space: nowrap;
+        }
+
+        @include gt-sm {
+            font-size: 1.1em;
+        }
+    }
+
+    .google-login-button {
+        border: 1px solid $cloud-gray;
+        border-radius: 3em;
+        padding: 1em 2em;
+        margin: 7px auto 10px;
+        align-items: center;
+        gap: 0.5em;
+
+        @include gt-xs {
+            padding: 1.1em 4.3em;
+        }
+
+        @include gt-sm {
+            padding: 1.1em 5.6em;
+            margin: 10px auto;
+        }
+
+        svg {
+            overflow: visible;
+            height: 18px;
+
+            @include gt-xs {
+                height: 22px;
+            }
+
+            @include gt-sm {
+                height: initial;
+            }
+        }
+
+        span {
+            font-weight: 400;
+            font-size: 1.15em;
+            color: $charcoal-gray;
+
+            @include gt-xs {
+                font-size: 1.3em;
+            }
+
+            @include gt-sm {
+                font-size: 1.45em;
+            }
+        }
+    }
+}
+
+.modal {
+    &-message {
+        font-weight: 300;
+        text-align: center;
+        font-size: 1.2em;
+        line-height: 1.4em;
+        color: $charcoal-gray;
+
+        span {
+            text-decoration: underline;
+            font-weight: 400;
+        }
+    }
+
+    &-content-title {
+        font-size: 1.3em;
+        font-weight: bold;
+        margin: 15px 0;
+    }
+}
