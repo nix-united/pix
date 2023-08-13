@@ -28,7 +28,7 @@
     "bugs": {
         "url": "https://github.com/nix-group/pix/issues"
     },
-    "homepage": "https://github.com/nix-group/pix#readme",
+    "homepage": "https://nix-group.github.io/pix",
     "dependencies": {
         "@react-oauth/google": "^0.11.0",
         "axios": "^1.4.0",
