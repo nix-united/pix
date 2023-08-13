@@ -115,7 +115,11 @@ export const usePswpUiElements = (mediaFilesLength: number) => {
             isButton: true,
             html: '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none"><use class="pswp__icn-shadow" xlink:href="#pswp__icn-grid"/><path d="M0 1.125C0 0.50368 0.50368 0 1.125 0H3.375C3.99632 0 4.5 0.50368 4.5 1.125V3.375C4.5 3.99632 3.99632 4.5 3.375 4.5H1.125C0.50368 4.5 0 3.99632 0 3.375V1.125Z" fill="white"/><path d="M6.75 1.125C6.75 0.50368 7.25368 0 7.875 0H10.125C10.7463 0 11.25 0.50368 11.25 1.125V3.375C11.25 3.99632 10.7463 4.5 10.125 4.5H7.875C7.25368 4.5 6.75 3.99632 6.75 3.375V1.125Z" fill="white"/><path d="M13.5 1.125C13.5 0.50368 14.0037 0 14.625 0H16.875C17.4963 0 18 0.50368 18 1.125V3.375C18 3.99632 17.4963 4.5 16.875 4.5H14.625C14.0037 4.5 13.5 3.99632 13.5 3.375V1.125Z" fill="white"/><path d="M0 7.875C0 7.25368 0.50368 6.75 1.125 6.75H3.375C3.99632 6.75 4.5 7.25368 4.5 7.875V10.125C4.5 10.7463 3.99632 11.25 3.375 11.25H1.125C0.50368 11.25 0 10.7463 0 10.125V7.875Z" fill="white"/><path d="M6.75 7.875C6.75 7.25368 7.25368 6.75 7.875 6.75H10.125C10.7463 6.75 11.25 7.25368 11.25 7.875V10.125C11.25 10.7463 10.7463 11.25 10.125 11.25H7.875C7.25368 11.25 6.75 10.7463 6.75 10.125V7.875Z" fill="white"/><path d="M13.5 7.875C13.5 7.25368 14.0037 6.75 14.625 6.75H16.875C17.4963 6.75 18 7.25368 18 7.875V10.125C18 10.7463 17.4963 11.25 16.875 11.25H14.625C14.0037 11.25 13.5 10.7463 13.5 10.125V7.875Z" fill="white"/><path d="M0 14.625C0 14.0037 0.50368 13.5 1.125 13.5H3.375C3.99632 13.5 4.5 14.0037 4.5 14.625V16.875C4.5 17.4963 3.99632 18 3.375 18H1.125C0.50368 18 0 17.4963 0 16.875V14.625Z" fill="white"/><path d="M6.75 14.625C6.75 14.0037 7.25368 13.5 7.875 13.5H10.125C10.7463 13.5 11.25 14.0037 11.25 14.625V16.875C11.25 17.4963 10.7463 18 10.125 18H7.875C7.25368 18 6.75 17.4963 6.75 16.875V14.625Z" fill="white"/><path d="M13.5 14.625C13.5 14.0037 14.0037 13.5 14.625 13.5H16.875C17.4963 13.5 18 14.0037 18 14.625V16.875C18 17.4963 17.4963 18 16.875 18H14.625C14.0037 18 13.5 17.4963 13.5 16.875V14.625Z" fill="white"/></svg>',
 
+<<<<<<< Updated upstream
             onClick: (event, el, pswp) => {
+=======
+            onClick: (_event, _el, pswp) => {
+>>>>>>> Stashed changes
                 toggleThumbnails = !toggleThumbnails
                 const thumbnailsWrapper = document.querySelector(
                     '.pswp__bullets-indicator'
@@ -141,7 +145,11 @@ export const usePswpUiElements = (mediaFilesLength: number) => {
             isButton: true,
             html: '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none"><use class="pswp__icn-shadow" xlink:href="#pswp__icn-fullscreen-exit"/><use class="pswp__icn-shadow" xlink:href="#pswp__icn-fullscreen-request"/><path d="M6.33333 1H2.77778C1.79594 1 1 1.79594 1 2.77778V6.33333M6.33333 17H2.77778C1.79594 17 1 16.2041 1 15.2222V11.6667M11.6667 1H15.2222C16.2041 1 17 1.79594 17 2.77778V6.33333M17 11.6667V15.2222C17 16.2041 16.2041 17 15.2222 17H11.6667" stroke="white" stroke-width="1.5" stroke-linecap="round" id="pswp__icn-fullscreen-request"/><path d="M1 11.8799H4.22208C5.20388 11.8799 5.99978 12.644 5.99978 13.5866V17M6 1V4.4134C6 5.35598 5.20409 6.1201 4.2223 6.1201H1.00022M17 11.8799H13.7779C12.7961 11.8799 12.0002 12.644 12.0002 13.5866V17M12 1V4.4134C12 5.35598 12.7959 6.1201 13.7777 6.1201H16.9998" stroke="white" stroke-width="1.5" stroke-linecap="round" id="pswp__icn-fullscreen-exit" style="display:none"/></svg>',
 
+<<<<<<< Updated upstream
             onClick: (event, el, pswp) => {
+=======
+            onClick: (_event, _el, pswp) => {
+>>>>>>> Stashed changes
                 const fullscreenAPI = getFullscreenAPI()
                 const fsExit = document.getElementById(
                     'pswp__icn-fullscreen-exit'
@@ -165,7 +173,11 @@ export const usePswpUiElements = (mediaFilesLength: number) => {
                 }
                 toggleFullscreen()
 
+<<<<<<< Updated upstream
                 function onFsChange(e: Event) {
+=======
+                function onFsChange(_e: Event) {
+>>>>>>> Stashed changes
                     if (!fullscreenAPI.isFullscreen()) {
                         fsExit.style.display = 'none'
                         fsRequest.style.display = 'inline'
@@ -194,7 +206,11 @@ export const usePswpUiElements = (mediaFilesLength: number) => {
             isButton: true,
             html: '<svg aria-hidden="true" width="16" height="18" viewBox="0 0 16 20" fill="none"><use class="pswp__icn-shadow" xlink:href="#pswp__icn-slideshow-start"/><path d="M13.2905 8.93735C14.585 9.69884 14.5898 10.6568 13.2905 11.5177L3.25121 18.6645C1.98979 19.3751 1.13307 18.9556 1.04314 17.418L1.00054 2.45982C0.972136 1.04355 2.07735 0.643399 3.13051 1.32244L13.2905 8.93735Z" stroke="white" stroke-width="1.5" id="pswp__icn-slideshow-start"/></svg>',
 
+<<<<<<< Updated upstream
             onClick: (event, el, pswp) => {
+=======
+            onClick: (_event, _el, pswp) => {
+>>>>>>> Stashed changes
                 const fullscreenAPI = getFullscreenAPI()
 
                 function toggleFullscreen() {
@@ -404,7 +420,11 @@ export const usePswpUiElements = (mediaFilesLength: number) => {
                     )
                 }
 
+<<<<<<< Updated upstream
                 function onFsChange(e: Event) {
+=======
+                function onFsChange(_e: Event) {
+>>>>>>> Stashed changes
                     if (!fullscreenAPI.isFullscreen()) {
                         clearInterval(ssInterval)
                         clearInterval(panelInterval)
@@ -446,7 +466,11 @@ export const usePswpUiElements = (mediaFilesLength: number) => {
             isButton: false,
             html: '<a class="pswp__button pswp__button--download-button" aria-label="Download" tabindex="0" target="_blank" rel="noopener" title="Download"><svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg"><use class="pswp__icn-shadow" xlink:href="#pswp__icn-download"></use><path d="M1 11.8483L1 15.1267C1 15.6235 1.19962 16.1 1.55496 16.4513C1.91029 16.8026 2.39222 17 2.89474 17H14.2632C14.7657 17 15.2476 16.8026 15.6029 16.4513C15.9583 16.1 16.1579 15.6235 16.1579 15.1267V11.8483M8.58 1V11.6155M8.58 11.6155L12.9108 7.55938M8.58 11.6155L4.24918 7.55938" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" id="pswp__icn-download"/></svg></a>',
 
+<<<<<<< Updated upstream
             onClick: (event, el, pswp) => {
+=======
+            onClick: (_event, _el, pswp) => {
+>>>>>>> Stashed changes
                 const downloadButton = document.querySelector(
                     '.pswp__button--download-button'
                 ) as HTMLAnchorElement
@@ -470,13 +494,21 @@ export const usePswpUiElements = (mediaFilesLength: number) => {
             isButton: true,
             html: '<svg aria-hidden="true" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"><use class="pswp__icn-shadow" xlink:href="#pswp__icn-copy-link"/><path d="M5.02335 7.53518L2.90937 9.64916C2.11986 10.4387 1.66583 11.5129 1.67413 12.6419C1.68243 13.7709 2.12652 14.8517 2.95349 15.6532C3.75489 16.4802 4.83592 16.9243 5.96474 16.9325C7.11932 16.941 8.16815 16.5126 8.95771 15.7231L11.0717 13.6091M13.7719 10.9605L15.8859 8.84653C16.6754 8.05702 17.1294 6.98277 17.1211 5.85376C17.1128 4.72475 16.6687 3.64395 15.8418 2.84251C15.0406 2.0413 13.9597 1.59719 12.8307 1.58889C11.7017 1.5806 10.6273 2.00885 9.83774 2.79838L7.72376 4.91237M6.19191 12.397L12.5339 6.05509" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" id="pswp__icn-copy-link"/></svg>',
 
+<<<<<<< Updated upstream
             onInit(element, pswp) {
+=======
+            onInit(element, _pswp) {
+>>>>>>> Stashed changes
                 const message = document.createElement('span')
                 message.classList.add('copy-result')
                 element.appendChild(message)
             },
 
+<<<<<<< Updated upstream
             onClick: async (event, el, pswp) => {
+=======
+            onClick: async (_event, _el, pswp) => {
+>>>>>>> Stashed changes
                 const message = document.querySelector(
                     '.copy-result'
                 ) as HTMLSpanElement
