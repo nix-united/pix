@@ -5,7 +5,7 @@ import svgr from 'vite-plugin-svgr'
 
 export default defineConfig({
     plugins: [react(), svgr()],
-    base: '/nix-group/pix/',
+    base: '/pix/',
     server: {
         port: 8080
     },
