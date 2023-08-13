@@ -1,0 +1,71 @@
+name: Release
+
+# Controls when the workflow will run
+on:
+    # Triggers the workflow on push or pull request events but only for the "master" branch
+    push:
+        branches: ['master']
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+    release:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write # to be able to publish a GitHub release
+            issues: write # to be able to comment on released issues
+            pull-requests: write # to be able to comment on released pull requests
+            id-token: write # to enable use of OIDC for npm provenance
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '18.17.0'
+                  cache: 'npm'
+
+            - name: Install semantic-release
+              run: npm install -g semantic-release
+
+            - name: Run semantic-release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: npx semantic-release
+    deploy:
+        permissions:
+            id-token: write
+            pages: write
+        runs-on: ubuntu-latest
+        # Steps represent a sequence of tasks that will be executed as part of the job
+        steps:
+            # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+            - name: Checkout
+              uses: actions/checkout@v3
+              with:
+                  fetch-depth: 0
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: '18.17.0'
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm install
+            - name: Build
+              env:
+                  VITE_CLIENT_ID: ${{ secrets.VITE_CLIENT_ID }}
+              run: npm run build
+            - name: Setup Pages
+              uses: actions/configure-pages@v3
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v1
+              with:
+                  # Upload dist repository
+                  path: './dist'
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v1
