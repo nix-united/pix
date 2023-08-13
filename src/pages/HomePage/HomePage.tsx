@@ -2,10 +2,10 @@ import { useState } from 'react'
 import { useLocation, useNavigate, Navigate } from 'react-router-dom'
 import { useGoogleLogin, hasGrantedAllScopesGoogle } from '@react-oauth/google'
 
-import { ALBUM_PATH, GOOGLE_SCOPES, ROOT_FOLDER } from '@/@constants'
+import { ALBUM_PATH, GOOGLE_SCOPES, ROOT_FOLDER } from '@/constants'
 import { Modal, Button } from '@/components'
 import { storageToken } from '@/utils'
-import { GoogleIcon, NixSignIcon, WarningIcon } from '@/assets/svg'
+import { GoogleIcon, XIcon, WarningIcon } from '@assets/svg'
 
 import './HomePage.scss'
 
@@ -55,7 +55,7 @@ export default function HomePage() {
                             <span className='middle-text'>to</span>{' '}
                             <span className='logo'>
                                 <span>pi</span>
-                                <NixSignIcon />
+                                <XIcon />
                             </span>
                         </span>
                     </h1>

@@ -11,7 +11,7 @@ import { $google } from '@/api/axios'
 import { googleRoutes } from '@/api/paths'
 import { storageToken } from '@/utils'
 
-type GoogleTokenResponse = {
+type TGoogleTokenResponse = {
     issued_to: string
     audience: string
     user_id: string
@@ -36,7 +36,7 @@ export default function PrivateRoute() {
 
         const validateUserToken = async () => {
             try {
-                const { data } = await $google.get<GoogleTokenResponse>(
+                const { data } = await $google.get<TGoogleTokenResponse>(
                     googleRoutes.validateToken
                 )
                 setIsTokenLoading(false)

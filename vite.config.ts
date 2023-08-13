@@ -5,6 +5,7 @@ import svgr from 'vite-plugin-svgr'
 
 export default defineConfig({
     plugins: [react(), svgr()],
+    base: '/nix-group/pix/',
     server: {
         port: 8080
     },
@@ -16,8 +17,8 @@ export default defineConfig({
             '@assets': resolve(__dirname, './src/assets'),
             '@hooks': resolve(__dirname, './src/hooks'),
             '@utils': resolve(__dirname, './src/utils'),
-            '@types': resolve(__dirname, './src/@types'),
-            '@constants': resolve(__dirname, './src/@constants')
+            '@types': resolve(__dirname, './src/types'),
+            '@constants': resolve(__dirname, './src/constants')
         }
     }
 })

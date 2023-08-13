@@ -1,0 +1,117 @@
+@use '/src/styles/media-queries' as *;
+@use 'src/styles/variables';
+
+.gallery-media {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 15px 20px;
+
+    @include gt-xs {
+        padding: 25px 35px;
+        margin-top: 10px;
+    }
+
+    @include gt-sm {
+        padding: 25px 50px;
+    }
+
+    .media-head {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        @include gt-xs {
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            gap: 0;
+        }
+    }
+
+    .media-title {
+        display: flex;
+        align-items: center;
+        color: rgba(52, 52, 52, 0.5);
+        user-select: none;
+        margin: 0 9px;
+        P {
+            margin-left: 7px;
+        }
+    }
+
+    .media-body {
+        height: 100%;
+    }
+
+    .view-buttons-wrapper {
+        display: flex;
+        gap: 5px;
+    }
+
+    .view-button {
+        padding: 9px;
+        border-radius: 12px;
+
+        svg path {
+            transition: stroke-opacity 0.3s ease-in-out;
+        }
+
+        &:hover {
+            svg path {
+                stroke-opacity: 1;
+            }
+        }
+
+        &.active {
+            background-color: transparent;
+            border: 1px solid transparent;
+
+            svg path {
+                stroke-opacity: 1;
+            }
+        }
+    }
+
+    .divider {
+        height: 1px;
+        background-color: rgba(52, 52, 52, 0.1);
+        margin: 18px auto 35px;
+        width: 100%;
+    }
+}
+
+.media-skeleton {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 9px;
+    align-items: center;
+    justify-items: center;
+    height: 100%;
+
+    &-item {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.media-empty {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 300;
+    color: rgba(52, 52, 52, 0.5);
+
+    P {
+        margin-top: 15px;
+        user-select: none;
+    }
+}

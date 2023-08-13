@@ -1,0 +1,26 @@
+@use '/src/styles/variables' as *;
+
+.copy-link-button {
+    padding: 4px;
+    border-radius: 6px;
+
+    svg path {
+        transition: stroke 0.3s ease-in-out;
+    }
+
+    &:focus {
+        border: 1px solid transparent;
+        svg path {
+            stroke: $charcoal-gray;
+        }
+    }
+
+    &:hover {
+        background-color: transparent;
+        border: 1px solid transparent;
+
+        svg path {
+            stroke: $charcoal-gray;
+        }
+    }
+}

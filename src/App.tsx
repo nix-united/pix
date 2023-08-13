@@ -1,10 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { ALBUM_PATH } from '@/@constants'
-import { GalleryPage, HomePage, NotFoundPage } from '@/pages'
-import PrivateRoute from '@components/PrivateRoute/PrivateRoute'
+import { ALBUM_PATH } from './constants'
+import { GalleryPage, HomePage, NotFoundPage } from './pages'
+import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 
-export const RootRouter = () => {
+export const App = () => {
     return (
         <BrowserRouter>
             <Routes>

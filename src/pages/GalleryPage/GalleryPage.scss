@@ -1,0 +1,36 @@
+@use '/src/styles/media-queries' as *;
+@use 'src/styles/variables';
+
+.gallery-container {
+    display: flex;
+    justify-content: center;
+}
+
+.gallery,
+.iframeStyle {
+    display: flex;
+    flex-direction: column;
+    max-width: 1240px;
+    width: 100%;
+    min-height: calc(100vh - 30px);
+    background: rgba(251, 251, 251, 0.9);
+    border-radius: 35px;
+    padding: 20px;
+    margin: 15px;
+
+    @include gt-xs {
+        margin: 25px 40px;
+        min-height: calc(100vh - 50px);
+        padding: 25px;
+    }
+
+    @include gt-sm {
+        margin: 35px 80px;
+        min-height: calc(100vh - 70px);
+        padding: 30px;
+    }
+}
+
+.iframeStyle {
+    background: rgb(240, 238, 255);
+}

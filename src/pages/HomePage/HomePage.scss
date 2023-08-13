@@ -66,7 +66,7 @@
         user-select: none;
 
         span {
-            white-space: nowrap;
+            font-weight: bold;
         }
 
         @include gt-sm {
@@ -78,7 +78,7 @@
         border: 1px solid $cloud-gray;
         border-radius: 3em;
         padding: 1em 2em;
-        margin: 7px auto 10px;
+        margin: 7px auto 6px;
         align-items: center;
         gap: 0.5em;
 
@@ -88,7 +88,7 @@
 
         @include gt-sm {
             padding: 1.1em 5.6em;
-            margin: 10px auto;
+            margin: 10px auto 8px;
         }
 
         svg {
