@@ -26,8 +26,8 @@
             "@assets/*": ["./src/assets/*"],
             "@hooks/*": ["./src/hooks/*"],
             "@utils/*": ["./src/utils/*"],
-            "@types/*": ["./src/@types/*"],
-            "@constants/*": ["./src/@constants/*"]
+            "@types/*": ["./src/types/*"],
+            "@constants/*": ["./src/constants/*"]
         }
     },
     "include": ["src"],

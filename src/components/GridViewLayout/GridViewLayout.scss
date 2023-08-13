@@ -1,0 +1,12 @@
+.grid-view {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-gap: 8px;
+    align-items: center;
+    justify-items: center;
+
+    & img {
+        height: 220px;
+        object-fit: cover;
+    }
+}

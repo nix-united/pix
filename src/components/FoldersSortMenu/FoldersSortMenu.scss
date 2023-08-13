@@ -1,0 +1,81 @@
+@use '/src/styles/media-queries' as *;
+@use 'src/styles/variables';
+
+.sort-button {
+    height: 38px;
+    width: 38px;
+    border-radius: 12px;
+    margin-left: auto;
+}
+
+.sort-menu-container {
+    position: relative;
+}
+
+.sort-menu {
+    position: absolute;
+    left: -56px;
+    right: 0;
+    width: 150px;
+    box-shadow: 0px 1px 6px rgba(79, 71, 71, 0.25);
+    border-radius: 12px;
+    background: #ffffff;
+    margin-top: 8px;
+    padding: 17px;
+
+    @include gt-sm {
+        left: -112px;
+        right: 0;
+    }
+
+    .menu-item {
+        width: 100%;
+        padding: 8px 0;
+        border-radius: 6px;
+        margin-top: 5px;
+        color: $smoke-gray;
+        position: relative;
+        transition: background-color 0.3s ease-in-out,
+            border-color 0.3s ease-in-out, color 0.3s ease-in-out;
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        svg {
+            display: none;
+            position: absolute;
+            left: 20%;
+        }
+
+        span {
+            user-select: none;
+        }
+
+        &:hover {
+            color: $charcoal-gray;
+        }
+
+        &.active-item {
+            background-color: transparent;
+            color: $charcoal-gray;
+
+            &:hover {
+                background-color: rgba(230, 230, 230, 0.5);
+                border: 1px solid transparent;
+            }
+        }
+
+        .show-order {
+            display: block;
+        }
+
+        .desc {
+            transform: rotate(0);
+        }
+
+        .asc {
+            transform: rotate(-180deg);
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import axios, { AxiosError } from 'axios'
+import axios, { AxiosError, RawAxiosRequestConfig } from 'axios'
 
 import { storageToken } from '@/utils'
 
@@ -21,3 +21,11 @@ $google.interceptors.response.use(
         return Promise.reject(error)
     }
 )
+
+export const fetcher = async ([url, config]: [
+    url: string,
+    config: RawAxiosRequestConfig
+]) => {
+    const { data } = await $google.get(url, config)
+    return data
+}

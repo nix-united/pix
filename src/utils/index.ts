@@ -1,1 +1,6 @@
 export { storageToken } from './storageToken'
+export { copyURL } from './copyURL'
+export { getFullscreenAPI } from './getFullscreenAPI'
+export { getUrlParam } from './getUrlParam'
+export { millisecondsIntoReadableTime } from './millisecondsIntoReadableTime'
+export { humanFileSize } from './humanFileSize'
