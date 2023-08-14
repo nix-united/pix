@@ -1,8 +1,8 @@
 <h1 align="center">Welcome to <a href="https://gallery.nixs.com/" target="_blank">PIX</a> 👋</h1>
 <p align="center">
   <img src="https://img.shields.io/badge/React-18.2.0-blue" height="25"/>
-  <img src="https://img.shields.io/badge/React-photoswipe-gallery-2.2.7-yellow" height="25"/>
-  <img src="https://img.shields.io/badge/React-photo-album-2.2.2-orange" height="25"/>
+  <img src="https://img.shields.io/badge/Photoswipe--2.2.7-yellow" height="25"/>
+  <img src="https://img.shields.io/badge/PhotoAlbum--2.2.2-orange" height="25"/>
 </p>
 
 ## Contents
@@ -17,35 +17,35 @@
 
 An application designed to view photos and videos from Google Drive.
 
+Authorization is carried out using gmail account.
 ![Alt text](image-2.png)
 
-Authorization is carried out using gmail account
-
+You can view your photos and videos in a convenient format. All you have to do is go to your media folder.
 ![Alt text](image-1.png)
 
-You can view your photos and videos in a convenient format. All you have to do is go to your media folder.
-
+You can navigate through folders using the folder block. Folders can be sorted by date added and name. Navigation is also possible with the help of breadcrumbs.<br/>
+You can copy the link to the current folder, so that for example, another user could also view media files (if access is configured for this user).
 ![Alt text](image-3.png)
 
-You can navigate through folders using the folder block. Folders can be sorted by date added and name. Navigation is also possible with the help of breadcrumbs. Also you can copy the link to the current folder, so that for example, another user could also view media files (if access is configured for this user).
+In the media files section, you can see your photos and videos stored in the current folder. The total number of files is displayed (if there are more than 50 on the current page, then 50+, 100+, etc. will be indicated).<br/>
+There is a view-layout change functionality:
+
+-   Inline
+-   Columns
+-   Grid
 
 ![Alt text](image-4.png)
 ![Alt text](image-5.png)
-In the media files section, you can see your photos and videos stored in the current folder. The total number of files is displayed (if there are more than 50 on the current page, then 50+, 100+, etc. will be indicated).
-There is a view-layout change functionality:
 
--   1. Inline
--   2. Columns
--   3. Grid
-
-![Alt text](image-6.png)
 When we opened the image, the functionality is available:
 
--   1. turning on / off thumbnails (by clicking on them, we can move to the image)
--   2. switching to full screen mode
--   3. starting a slide show
--   4. downloading the current image
--   5. copying the link to the current image
+-   turning on / off thumbnails (by clicking on them, we can move to the image)
+-   switching to full screen mode
+-   starting a slide show
+-   downloading the current image
+-   copying the link to the current image
+
+![Alt text](image-6.png)
 
 ## Installation and Setup Instructions
 
