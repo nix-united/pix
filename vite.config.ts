@@ -26,7 +26,19 @@ export default defineConfig(({ command }) => {
     } else {
         return {
             plugins: [react()],
-            base: '/pix/'
+            base: '/pix/',
+            resolve: {
+                alias: {
+                    '@': resolve(__dirname, './src'),
+                    '@components': resolve(__dirname, './src/components'),
+                    '@pages': resolve(__dirname, './src/pages'),
+                    '@assets': resolve(__dirname, './src/assets'),
+                    '@hooks': resolve(__dirname, './src/hooks'),
+                    '@utils': resolve(__dirname, './src/utils'),
+                    '@types': resolve(__dirname, './src/types'),
+                    '@constants': resolve(__dirname, './src/constants')
+                }
+            }
         }
     }
 })
