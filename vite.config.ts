@@ -25,7 +25,7 @@ export default defineConfig(({ command }) => {
         }
     } else {
         return {
-            plugins: [react()],
+            plugins: [react(), svgr()],
             base: '/pix/',
             resolve: {
                 alias: {
