@@ -8,7 +8,7 @@ export const App = () => {
     return (
         <BrowserRouter
             basename={
-                import.meta.env.MODE !== 'development' ? '/react-todo' : '/'
+                import.meta.env.MODE !== 'development' ? '/pix' : '/'
             }
         >
             <Routes>
