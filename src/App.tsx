@@ -6,7 +6,11 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute'
 
 export const App = () => {
     return (
-        <BrowserRouter>
+        <BrowserRouter
+            basename={
+                import.meta.env.MODE !== 'development' ? '/react-todo' : '/'
+            }
+        >
             <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route element={<PrivateRoute />}>
