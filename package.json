@@ -4,17 +4,6 @@
     "private": true,
     "version": "0.0.0",
     "type": "module",
-    "engines": {
-        "npm": "please use yarn",
-        "yarn": "^1.22.19",
-        "node": ">=18.15.0"
-    },
-    "scripts": {
-        "dev": "vite",
-        "build": "tsc && vite build",
-        "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-        "preview": "vite preview"
-    },
     "repository": {
         "type": "git",
         "url": "git@github.com:nix-group/pix.git"
@@ -29,6 +18,17 @@
         "url": "https://github.com/nix-group/pix/issues"
     },
     "homepage": "https://nix-group.github.io/pix",
+    "engines": {
+        "npm": "please use yarn",
+        "yarn": "^1.22.19",
+        "node": ">=18.15.0"
+    },
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+        "preview": "vite preview"
+    },
     "dependencies": {
         "@react-oauth/google": "^0.11.0",
         "axios": "^1.4.0",
