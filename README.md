@@ -62,7 +62,7 @@ Set up your Google Cloud project: <a href="https://developers.google.com/maps/do
 
 How to Enable Google Drive API on the Google Console: <a href="https://www.cybrosys.com/blog/how-to-enable-google-drive-api-on-the-google-console" target="_blank">here</a>
 
-## Available Scripts`
+## Available Scripts
 
 In the project directory, you can run:
 
@@ -75,3 +75,10 @@ Open `http://localhost:8080` to view it in the browser. The page will reload if 
 It optimizes the build for the best performance by minifying JavaScript, CSS, and HTML, resizing and optimizing images and so on. Your app is ready to be deployed!
 
 – `yarn preview` - locally preview production build. You can see what your already built application looks like and correct the errors.
+
+## License
+
+The project is developed by [NIX][1] and distributed under [MIT LICENSE][2]
+
+[1]: https://nixs.com/
+[2]: https://raw.githubusercontent.com/nix-group/pix/master/LICENSE
