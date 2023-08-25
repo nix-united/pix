@@ -1,7 +1,25 @@
 @use '/src/styles/media-queries' as *;
 @use 'src/styles/variables';
 
-.home-page-container {
+.paper-footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .policy {
+        position: absolute;
+        text-decoration: none;
+        margin-top: 4px;
+        color: #89cbf7;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+            color: $primary-blue;
+        }
+    }
+}
+
+.paper-main {
     .title {
         text-align: center;
         color: $primary-blue;

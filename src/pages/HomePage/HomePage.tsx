@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useLocation, useNavigate, Navigate } from 'react-router-dom'
+import { useLocation, useNavigate, Navigate, Link } from 'react-router-dom'
 import { useGoogleLogin, hasGrantedAllScopesGoogle } from '@react-oauth/google'
 
 import { ALBUM_PATH, GOOGLE_SCOPES, ROOT_FOLDER } from '@/constants'
@@ -48,28 +48,35 @@ export default function HomePage() {
     return (
         <div className='container'>
             <div className='paper'>
-                <div className='home-page-container'>
-                    <h1 className='title'>
-                        Welcome{' '}
-                        <span className='wrapper'>
-                            <span className='middle-text'>to</span>{' '}
-                            <span className='logo'>
-                                <span>pi</span>
-                                <XIcon />
+                <div className='paper-content'>
+                    <div className='paper-main'>
+                        <h1 className='title'>
+                            Welcome{' '}
+                            <span className='wrapper'>
+                                <span className='middle-text'>to</span>{' '}
+                                <span className='logo'>
+                                    <span>pi</span>
+                                    <XIcon />
+                                </span>
                             </span>
-                        </span>
-                    </h1>
-                    <Button
-                        className='google-login-button'
-                        onClick={() => login()}
-                    >
-                        <GoogleIcon />
-                        <span>Sign in with Google</span>
-                    </Button>
-                    <h2 className='helper-text'>
-                        quickly view photos and videos from your{' '}
-                        <span>Google Drive</span>
-                    </h2>
+                        </h1>
+                        <Button
+                            className='google-login-button'
+                            onClick={() => login()}
+                        >
+                            <GoogleIcon />
+                            <span>Sign in with Google</span>
+                        </Button>
+                        <h2 className='helper-text'>
+                            quickly view photos and videos from your{' '}
+                            <span>Google Drive</span>
+                        </h2>
+                    </div>
+                    <div className='paper-footer'>
+                        <Link className='policy' to={'/policy'}>
+                            privacy policy
+                        </Link>
+                    </div>
                 </div>
             </div>
             <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
