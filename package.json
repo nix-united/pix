@@ -2,11 +2,11 @@
     "name": "pix",
     "description": "This app designed to view photos and videos from Google Drive",
     "private": true,
-    "version": "0.0.0",
+    "version": "1.0.0",
     "type": "module",
     "repository": {
         "type": "git",
-        "url": "git@github.com:nix-group/pix.git"
+        "url": "git@github.com:nix-united/pix.git"
     },
     "author": "Mykyta Pidhornyi <mykyta.pidhornyi@nixs.com>",
     "keywords": [
@@ -15,9 +15,9 @@
     ],
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/nix-group/pix/issues"
+        "url": "https://github.com/nix-united/pix/issues"
     },
-    "homepage": "https://nix-group.github.io/pix",
+    "homepage": "https://nix-united.github.io/pix",
     "engines": {
         "npm": "please use yarn",
         "yarn": "^1.22.19",
