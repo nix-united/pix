@@ -50,7 +50,7 @@ export default function PrivateRoute() {
                     clearTimeout(timeout)
                 }
             } catch (err) {
-                logout(true)
+                logout(true, folderId)
             }
         }
 

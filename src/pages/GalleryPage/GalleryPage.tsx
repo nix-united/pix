@@ -23,6 +23,7 @@ export default function GalleryPage() {
     if (data?.trashed || error) {
         return <Navigate to={ALBUM_PATH + ROOT_FOLDER} replace />
     }
+
     const iframeStatus = window.self == window.top
 
     if (iframeStatus)
@@ -43,6 +44,7 @@ export default function GalleryPage() {
             <div className='gallery-container'>
                 <ScrollToTopButton />
                 <div className='gallery iframeStyle'>
+                    <GalleryFolders folderId={folderId as string} />
                     <GalleryMedia folderId={folderId as string} />
                 </div>
             </div>
