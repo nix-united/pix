@@ -1,11 +1,5 @@
 import { useEffect, useState } from 'react'
-import {
-    Navigate,
-    Outlet,
-    useLocation,
-    useNavigate,
-    useParams
-} from 'react-router-dom'
+import { Navigate, Outlet, useNavigate, useParams } from 'react-router-dom'
 
 import { $google } from '@/api/axios'
 import { googleRoutes } from '@/api/paths'
@@ -24,14 +18,13 @@ type TGoogleTokenResponse = {
 export default function PrivateRoute() {
     const [isTokenLoading, setIsTokenLoading] = useState(true)
     const { folderId } = useParams()
-    const { state } = useLocation()
     const navigate = useNavigate()
     let timeout: ReturnType<typeof setTimeout>
 
     useEffect(() => {
-        const logout = (replace: boolean, state: null | string = null) => {
+        const logout = (replace: boolean) => {
             localStorage.clear()
-            navigate('/', { state, replace })
+            navigate('/', { state: folderId, replace })
         }
 
         const validateUserToken = async () => {
@@ -42,7 +35,7 @@ export default function PrivateRoute() {
                 setIsTokenLoading(false)
 
                 timeout = setTimeout(
-                    () => logout(false, folderId),
+                    () => logout(false),
                     data.expires_in * 1000
                 )
 
@@ -50,16 +43,11 @@ export default function PrivateRoute() {
                     clearTimeout(timeout)
                 }
             } catch (err) {
-                logout(true, folderId)
+                logout(true)
             }
         }
 
-        if (state?.expires_in) {
-            timeout = setTimeout(() => logout(false), state.expires_in * 1000)
-            setIsTokenLoading(false)
-        } else {
-            validateUserToken()
-        }
+        validateUserToken()
 
         return () => {
             clearTimeout(timeout)

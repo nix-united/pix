@@ -31,7 +31,6 @@ export default function HomePage() {
             //@ts-ignore
             localStorage.setItem('authuser', tokenResponse.authuser)
             navigate(ALBUM_PATH + (state ? state : ROOT_FOLDER), {
-                state: { expires_in: tokenResponse.expires_in },
                 replace: true
             })
         },
