@@ -10,7 +10,7 @@ export default function PolicyPage() {
                     {new Date('2023-08-23').toLocaleDateString()}
                 </h2>
                 <p className='description'>
-                    Welcome to PIX ("app")! Our app provides you with the
+                    Welcome to PIX! Our app provides you with the
                     ability to view and access your photo and video files from
                     your Google Drive within the app. This Privacy Policy is
                     designed to help you understand how we collect, use, and
